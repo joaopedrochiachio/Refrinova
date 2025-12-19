@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refrinova | Engenharia Térmica Industrial</title>
-
     <link rel="stylesheet" href="css/style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -18,212 +17,147 @@
 
     <header id="header">
         <div class="container header-content">
-            <div class="logo">
-                <a href="#home">
-                    <img src="assets/logo.png" alt="Refrinova" class="logo-img">
-                </a>
-            </div>
-
+            <a href="index.html"><img src="assets/logo.png" alt="Refrinova" class="logo-img"></a>
             <nav id="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">A Empresa</a></li>
-                    <li><a href="#clientes">Cases</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="sobre.html">A Empresa</a></li>
+                    <li><a href="cases.html">Cases</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
-
-            <a href="https://wa.me/5535988152595" target="_blank" class="btn-header">
-                <i class="fab fa-whatsapp"></i> Orçamento
-            </a>
-
-            <div class="mobile-menu-icon" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+            <a href="contato.html" class="btn-header">ORÇAMENTO</a>
+            <div class="mobile-menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
         </div>
     </header>
 
-    <section id="home" class="hero-slider">
+    <section class="hero-slider" id="home">
         <div class="container">
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide-content-left reveal-text">
-                            <span class="badge-pill">Atendendo Pouso Alegre e Região</span>
-                            <h1>Excelência em <br> <span>Refrigeração Industrial</span></h1>
-                            <p>Engenharia térmica de precisão. Garantimos a temperatura ideal para que sua indústria nunca pare de produzir.</p>
+                            <span>ENGENHARIA DE PRECISÃO</span>
+                            <h1>Refrigeração Industrial <br> <strong>de Alta Performance</strong></h1>
+                            <p>Soluções completas para indústrias que não podem parar. Garantimos eficiência, segurança
+                                e conformidade normativa.</p>
                             <div class="btn-group">
-                                <a href="#contato" class="btn-primary">Falar com Engenheiro</a>
-                                <a href="#clientes" class="btn-outline">Ver Portfólio</a>
+                                <a href="contato.html" class="btn-primary">Falar com Engenheiro</a>
+                                <a href="cases.html" class="btn-outline">Ver Projetos</a>
                             </div>
                         </div>
                         <div class="slide-image-right reveal-img">
-                            <img src="assets/image_5.jpg" alt="Técnico em Refrigeração" class="slide-bg-img">
+                            <img src="assets/image_5.jpg" class="slide-bg-img">
                         </div>
                     </div>
-
-                    <div class="swiper-slide">
-                        <div class="slide-content-left">
-                            <span class="badge-pill">Automação Avançada</span>
-                            <h1>Comandos Elétricos <br> <span>& Controle</span></h1>
-                            <p>Domínio total da tecnologia. Realizamos montagem, manutenção e retrofit de quadros de comando com padrão internacional.</p>
-                            <div class="btn-group">
-                                <a href="#sobre" class="btn-primary">Nossos Serviços</a>
-                            </div>
-                        </div>
-                        <div class="slide-image-right">
-                            <img src="assets/image_3.png" alt="Quadro Elétrico Industrial" class="slide-bg-img">
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="section">
-        <div class="container grid-2">
-            <div class="sobre-img-wrapper reveal-right">
-                <img src="assets/image_5.jpg" alt="Equipe Refrinova" class="img-main">
-                <div class="floating-card compact">
-                    <i class="fas fa-shield-alt"></i>
-                    <div>
-                        <strong>Segurança Total</strong>
-                        <span>NR-10 e NR-35</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sobre-text reveal-left">
-                <h4 class="sub-title">NOSSA EXPERTISE</h4>
-                <h2>Soluções que impulsionam a sua produtividade</h2>
-                <p>A <strong>Refrinova</strong> está presente no coração industrial do Sul de Minas, oferecendo soluções em refrigeração que fazem a diferença no desempenho do seu negócio. Sabemos que cada grau de temperatura é decisivo para manter a qualidade, a segurança e a eficiência do seu produto.</p>
-
-                <ul class="check-list rich-list">
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <strong>Projetos de Câmaras Frigoríficas</strong>
-                            <p>Soluções sob medida, pensadas para eficiência energética e durabilidade.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <strong>Manutenção de Chillers e VRF</strong>
-                            <p>Confiabilidade operacional e redução de custos nos seus equipamentos.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        <div>
-                            <strong>PMOC e Laudos Técnicos</strong>
-                            <p>Conformidade com as normas e segurança operacional para sua empresa.</p>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="action-row">
-                    <a href="#contato" class="link-destaque">
-                        Agendar avaliação técnica <i class="fas fa-arrow-right"></i>
-                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="clientes" class="section bg-dark">
+    <section class="stats-section">
+        <div class="container"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+            <div class="stat-item reveal-up">
+                <i class="fas fa-industry"></i>
+                <span class="stat-number">+50</span>
+                <span class="stat-label">Grandes Indústrias</span>
+            </div>
+            <div class="stat-item reveal-up delay-100">
+                <i class="fas fa-project-diagram"></i>
+                <span class="stat-number">+200</span>
+                <span class="stat-label">Projetos Entregues</span>
+            </div>
+            <div class="stat-item reveal-up delay-200">
+                <i class="fas fa-shield-alt"></i>
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Conformidade NR</span>
+            </div>
+            <div class="stat-item reveal-up delay-300">
+                <i class="fas fa-bolt"></i>
+                <span class="stat-number">-30%</span>
+                <span class="stat-label">Custos Energéticos</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
         <div class="container">
-            <div class="section-header text-center reveal-up">
-                <h4 class="sub-title light">CASES DE SUCESSO</h4>
-                <h2 class="light-text">Quem confia na Refrinova</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
+                <span class="sub-title">O QUE FAZEMOS</span>
+                <h2>Soluções de Engenharia Integrada</h2>
+                <p style="color: var(--gray);">Atuamos em todo o ciclo de vida dos seus ativos de refrigeração.</p>
             </div>
 
-            <div class="clients-modern-grid">
-                <div class="client-box reveal-up delay-100">
-                    <img src="assets/image_8.png" alt="General Mills" class="com-fundo">
+            <div class="services-grid-home">
+                <div class="service-card-home reveal-up">
+                    <i class="fas fa-snowflake"
+                        style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;"></i>
+                    <h3>Câmaras Frigoríficas</h3>
+                    <p style="color: var(--gray); margin-top: 10px;">Projetos turnkey de alta eficiência para estocagem
+                        e processos.</p>
                 </div>
-                <div class="client-box reveal-up delay-200">
-                    <img src="assets/image_0.png" alt="Cooper Rita">
+                <div class="service-card-home reveal-up delay-100">
+                    <i class="fas fa-tools"
+                        style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;"></i>
+                    <h3>Manutenção Industrial</h3>
+                    <p style="color: var(--gray); margin-top: 10px;">Preventiva e corretiva em Chillers, VRF e Salas de
+                        Máquinas.</p>
                 </div>
-                <div class="client-box reveal-up delay-300">
-                    <img src="assets/image_6.png" alt="Kopenhagen" class="com-fundo">
+                <div class="service-card-home reveal-up delay-200">
+                    <i class="fas fa-file-contract"
+                        style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px;"></i>
+                    <h3>PMOC e Laudos</h3>
+                    <p style="color: var(--gray); margin-top: 10px;">Gestão completa de ativos e conformidade com a
+                        ANVISA.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section py-small">
-        <div class="container text-center">
-            <p class="marcas-text">Manutenção Especializada em</p>
-            <div class="brands-row reveal-up">
-                <img src="assets/image_2.png" title="Trane">
-                <img src="assets/image_4.png" title="Carrier">
-                <img src="assets/image_7.png" title="Carel">
-                <img src="assets/image_1.png" title="Elgin">
-            </div>
-        </div>
-    </section>
+    <section class="tech-section">
+        <div class="container">
+            <div class="tech-wrapper reveal-up">
+                <p class="tech-title">Experts nas tecnologias</p>
 
-    <section id="contato" class="section contact-section">
-        <div class="container grid-2">
-            <div class="contact-details reveal-left">
-                <h2>Vamos iniciar um projeto?</h2>
-                <p>Equipe pronta para atendimento emergencial ou preventivo.</p>
-
-                <div class="contact-cards-vertical">
-                    <a href="tel:+5535988152595" class="contact-card">
-                        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
-                        <div>
-                            <label>Ligue Agora</label>
-                            <strong>(35) 98815-2595</strong>
-                        </div>
-                    </a>
-                    <a href="mailto:otavio@refrinova.ind.br" class="contact-card">
-                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <label>Solicite Orçamento</label>
-                            <strong>otavio@refrinova.ind.br</strong>
-                        </div>
-                    </a>
-                    <div class="contact-card">
-                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <label>Base Operacional</label>
-                            <strong style="display: block; margin-bottom: 2px;">Rua Francisco Aragone, 10</strong>
-                            <span style="display: block; font-size: 0.85rem; color: #64748b; line-height: 1.4;">Francisca Augusta Rios</span>
-                            <span style="display: block; font-size: 0.85rem; color: #64748b;">Pouso Alegre - MG, 37.557-049</span>
-                        </div>
+                <div class="brands-grid-tiles">
+                    <div class="brand-tile">
+                        <img src="assets/image_2.png" title="Trane" alt="Trane">
+                    </div>
+                    <div class="brand-tile">
+                        <img src="assets/image_4.png" title="Carrier" alt="Carrier">
+                    </div>
+                    <div class="brand-tile">
+                        <img src="assets/image_7.png" title="Carel" alt="Carel">
+                    </div>
+                    <div class="brand-tile">
+                        <img src="assets/image_1.png" title="Elgin" alt="Elgin">
                     </div>
                 </div>
             </div>
-
-            <div class="map-wrapper reveal-right">
-                <iframe 
-                    src="https://maps.google.com/maps?q=Rua%20Francisco%20Aragone%2C%2010%20-%20Francisca%20Augusta%20Rios%2C%20Pouso%20Alegre%20-%20MG&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
-            </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <section class="section bg-darker text-center">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="assets/logo.png" alt="Refrinova" style="filter: brightness(0) invert(1); height: 40px; margin: 0 auto 20px auto;">
-                </div>
-                <p>© 2025 Refrinova Soluções Industriais.</p>
-            </div>
+            <h2 style="margin-bottom: 20px;">Pronto para otimizar sua operação?</h2>
+            <p style="margin-bottom: 40px; color: var(--gray);">Fale com nossa engenharia e descubra como reduzir custos
+                e aumentar a segurança.</p>
+            <a href="contato.html" class="btn-primary">SOLICITAR CONSULTORIA</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center" style="padding: 40px 0; color: var(--gray);">
+            <p>© 2025 Refrinova Engenharia.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/5535988152595" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
-
+    <script>
+        function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }
+    </script>
 </body>
+
 </html>

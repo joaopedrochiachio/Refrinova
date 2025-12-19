@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Refrinova</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+    <header id="header">
+        <div class="container header-content">
+            <a href="index.html"><img src="assets/logo.png" alt="Refrinova" class="logo-img"></a>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">A Empresa</a></li>
+                    <li><a href="cases.html">Cases</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="btn-header">ORÇAMENTO</a>
+            <div class="mobile-menu-icon" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <p class="reveal-up">FALE CONOSCO</p>
+            <h1 class="reveal-up delay-100">Vamos Iniciar um Projeto?</h1>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-wrapper reveal-up">
+                <div class="contact-info">
+                    <h3 style="color: #fff; margin-bottom: 30px;">Canais de Atendimento</h3>
+                    
+                    <div class="check-item" style="margin-bottom: 20px;">
+                        <i class="fas fa-phone-alt"></i> 
+                        <div>
+                            <span style="display:block; font-size:0.8rem; color:var(--gray);">Comercial / Emergência</span>
+                            <strong style="font-size:1.1rem; color:#fff;">(35) 98815-2595</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="check-item" style="margin-bottom: 20px;">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span style="display:block; font-size:0.8rem; color:var(--gray);">E-mail Corporativo</span>
+                            <strong style="font-size:1.1rem; color:#fff;">otavio@refrinova.ind.br</strong>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span style="display:block; font-size:0.8rem; color:var(--gray);">Base Operacional</span>
+                            <strong style="font-size:1rem; color:#fff;">Rua Francisco Aragone, 10<br>Pouso Alegre - MG</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formsubmit.co/refrinova@ind.br" method="POST">
+                    
+                    <h3 style="color: #fff; margin-bottom: 30px;">Envie uma Mensagem</h3>
+                    
+                    <input type="hidden" name="_template" value="box"> <input type="hidden" name="_subject" value="🔔 Novo Orçamento - Site Refrinova"> <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_autoresponse" value="Olá! Recebemos sua solicitação de orçamento. Nossa equipe técnica analisará sua demanda e entrará em contato em breve. Atenciosamente, Refrinova Engenharia.">
+
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <input type="text" name="Nome" class="form-input" placeholder="Seu nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>E-mail Corporativo</label>
+                        <input type="email" name="Email" class="form-input" placeholder="seu@empresa.com.br" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea name="Mensagem" class="form-input" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; border:none; cursor:pointer;">ENVIAR SOLICITAÇÃO</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section style="height: 400px; width: 100%;">
+        <iframe 
+            src="https://maps.google.com/maps?q=Rua%20Francisco%20Aragone%2C%2010%20-%20Francisca%20Augusta%20Rios%2C%20Pouso%20Alegre%20-%20MG&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+
+    <footer>
+        <div class="container text-center" style="padding: 40px 0; color: var(--gray);">
+            <p>© 2025 Refrinova Engenharia.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }</script>
+</body>
+</html>
