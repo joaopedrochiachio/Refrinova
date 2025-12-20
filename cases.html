@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cases de Sucesso | Refrinova</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <style>
+        .gallery-grid {
+            display: grid;
+            /* Cria colunas menores (mínimo 180px) para caber mais fotos */
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px; /* Espaço menor entre as fotos */
+            padding: 10px;
+        }
+
+        .gallery-item {
+            height: 180px; /* Quadrados perfeitos e menores */
+            border-radius: 12px; /* Bordas bem arredondadas (bonitinho) */
+            overflow: hidden;
+            position: relative;
+            border: 2px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a foto preencha o quadrado sem esticar */
+            transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            filter: brightness(0.9); /* Levemente mais escuro para destacar quando passar o mouse */
+        }
+
+        /* Efeito ao passar o mouse */
+        .gallery-item:hover {
+            border-color: var(--secondary); /* Borda azul ciano */
+            transform: translateY(-5px); /* Flutua levemente */
+            box-shadow: 0 10px 25px rgba(0, 168, 204, 0.25); /* Brilho azul */
+            z-index: 2;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Zoom suave na imagem */
+            filter: brightness(1.1); /* A foto acende/fica mais brilhante */
+        }
+
+        /* Ajuste para Celular: 2 fotos por linha */
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr); /* Força 2 colunas */
+                gap: 10px;
+            }
+            .gallery-item {
+                height: 140px; /* Bem menor no celular */
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <header id="header">
@@ -36,76 +92,211 @@
 
     <section class="section" style="padding-bottom: 40px;">
         <div class="container text-center" style="max-width: 800px;">
-            <p style="color: var(--gray); font-size: 1.1rem;">
-                Ao longo de nossa trajetória, a <strong>Refrinova</strong> consolidou parcerias estratégicas com indústrias que são líderes em seus segmentos. Abaixo, destacamos algumas operações onde nossa engenharia fez a diferença.
+            <p style="color: var(--gray); font-size: 1.5rem;">
+                Ao longo de nossa trajetória, a <strong>Refrinova</strong> consolidou parcerias estratégicas com
+                indústrias que são líderes em seus segmentos. Abaixo, destacamos algumas operações onde nossa engenharia
+                fez a diferença.
             </p>
         </div>
     </section>
 
     <section class="section">
         <div class="container">
-            
-            <div class="case-card-big reveal-up">
-                <div class="case-info">
-                    <span class="case-badge">Indústria Alimentícia</span>
-                    <h3>General Mills</h3>
-                    <p style="color: var(--gray); margin-bottom: 25px;">
-                        Multinacional referência global em alimentos (Yoki, Kitano, Häagen-Dazs). Atuamos garantindo a conformidade com rigorosos padrões internacionais de qualidade e segurança alimentar.
-                    </p>
-                    <ul class="rich-list">
-                        <li><i class="fas fa-check"></i> Manutenção Preventiva de Alta Performance</li>
-                        <li><i class="fas fa-check"></i> Gestão de Ativos e Redução de Downtime</li>
-                    </ul>
-                </div>
-                <div class="case-img-wrap">
-                    <img src="assets/image_8.png" alt="General Mills Logo">
-                </div>
-            </div>
 
-            <div class="case-card-big reveal-up">
-                <div class="case-info">
-                    <span class="case-badge">Agronegócio e Laticínios</span>
-                    <h3>Cooper Rita</h3>
-                    <p style="color: var(--gray); margin-bottom: 25px;">
-                        Uma das maiores cooperativas de laticínios da região. Desenvolvemos soluções focadas na eficiência energética para câmaras de estocagem de grande volume.
-                    </p>
-                    <ul class="rich-list">
-                        <li><i class="fas fa-check"></i> Projetos de Expansão de Câmaras</li>
-                        <li><i class="fas fa-check"></i> Otimização do Consumo Energético</li>
-                    </ul>
-                </div>
-                <div class="case-img-wrap">
-                    <img src="assets/image_0.png" alt="Cooper Rita Logo">
-                </div>
-            </div>
+            <div class="cases-grid-compact">
 
-            <div class="case-card-big reveal-up">
-                <div class="case-info">
-                    <span class="case-badge">Indústria de Chocolates</span>
-                    <h3>Kopenhagen</h3>
-                    <p style="color: var(--gray); margin-bottom: 25px;">
-                        Líder em chocolates finos. O controle preciso de temperatura e umidade é vital para manter a textura e qualidade premium dos produtos.
-                    </p>
-                    <ul class="rich-list">
-                        <li><i class="fas fa-check"></i> Climatização de Processo Crítico</li>
-                        <li><i class="fas fa-check"></i> Controle Rigoroso de Umidade Relativa</li>
-                    </ul>
+                <div class="case-card-compact reveal-up">
+                    <div class="case-compact-img">
+                        <img src="assets/image_8.png" alt="General Mills">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Indústria Alimentícia</span>
+                        <h3>General Mills</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Multinacional (Yoki, Kitano). Garantia de padrões globais de segurança e manutenção
+                            de alta performance.
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Gestão de Ativos</li>
+                            <li><i class="fas fa-check"></i> Redução de Downtime</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="case-img-wrap">
-                    <img src="assets/image_6.png" alt="Kopenhagen Logo">
-                </div>
-            </div>
 
+                <div class="case-card-compact reveal-up delay-100">
+                    <div class="case-compact-img">
+                        <img src="assets/cristalia.png" alt="Cristália">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Farmacêutica</span>
+                        <h3>Cristália Laboratório</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Ambientes críticos e salas limpas. Controle absoluto de contaminantes e estabilidade
+                            térmica.
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Climatização de Precisão</li>
+                            <li><i class="fas fa-check"></i> Controle de Umidade</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-card-compact reveal-up delay-200">
+                    <div class="case-compact-img">
+                        <img src="assets/gasverde.png" alt="Gás Verde">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Energia</span>
+                        <h3>Gás Verde</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Produção de biometano. Resfriamento de processos de compressão em áreas
+                            classificadas (EX).
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Segurança Operacional</li>
+                            <li><i class="fas fa-check"></i> Resfriamento Industrial</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-card-compact reveal-up">
+                    <div class="case-compact-img">
+                        <img src="assets/image_0.png" alt="Cooper Rita">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Laticínios</span>
+                        <h3>Cooper Rita</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Eficiência energética para câmaras de estocagem de grande volume e expansão fabril.
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Otimização Energética</li>
+                            <li><i class="fas fa-check"></i> Expansão de Câmaras</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-card-compact reveal-up delay-100">
+                    <div class="case-compact-img">
+                        <img src="assets/image_6.png" alt="Kopenhagen">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Chocolates</span>
+                        <h3>Kopenhagen</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Controle rigoroso de temperatura para manter a textura premium e brilho do
+                            chocolate.
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Processo Crítico</li>
+                            <li><i class="fas fa-check"></i> Controle de Umidade</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-card-compact reveal-up delay-200">
+                    <div class="case-compact-img">
+                        <img src="assets/baronesa.png" alt="Baronesa">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Varejo</span>
+                        <h3>Hipermercado Baronesa</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Otimização do ciclo de frio alimentar, garantindo integridade de perecíveis no PDV.
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Retrofit de Ilhas</li>
+                            <li><i class="fas fa-check"></i> Automação de Frio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-card-compact reveal-up">
+                    <div class="case-compact-img">
+                        <img src="assets/shups.png" alt="Shup's">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Indústria de Sorvetes</span>
+                        <h3>Sorvetes Shup’s</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Soluções para temperaturas extremas (-25°C) e túneis de congelamento rápido.
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Túneis de Congelamento</li>
+                            <li><i class="fas fa-check"></i> Câmaras Baixa Temp.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-card-compact reveal-up delay-100">
+                    <div class="case-compact-img">
+                        <img src="assets/costelanobafo.png" alt="Costela no Bafo">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Food Service</span>
+                        <h3>Costela no Bafo</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Conservação de carnes nobres com câmaras dimensionadas para alto fluxo de cozinha.
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Câmaras Frigoríficas</li>
+                            <li><i class="fas fa-check"></i> Segurança Alimentar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="case-card-compact reveal-up delay-200">
+                    <div class="case-compact-img">
+                        <img src="assets/cara.png" alt="Restaurante do Cara">
+                    </div>
+                    <div class="case-compact-info">
+                        <span class="case-compact-badge">Gastronomia</span>
+                        <h3>Restaurante do Cara</h3>
+                        <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 20px;">
+                            Projeto de climatização e refrigeração comercial para conforto e estoque.
+                        </p>
+                        <ul class="compact-list">
+                            <li><i class="fas fa-check"></i> Manutenção Preventiva</li>
+                            <li><i class="fas fa-check"></i> Conforto Térmico</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
+                <span class="sub-title">EM CAMPO</span>
+                <h2>Galeria de Execuções</h2>
+                <p style="color: var(--gray); font-size: 0.9rem;">Registros do nosso padrão de qualidade.</p>
+            </div>
+
+            <div class="gallery-grid reveal-up">
+                <div class="gallery-item"><img src="assets/foto1.jpeg" alt="Execução Refrinova 1" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto2.jpeg" alt="Execução Refrinova 2" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto3.jpeg" alt="Execução Refrinova 3" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto4.jpeg" alt="Execução Refrinova 4" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto5.jpeg" alt="Execução Refrinova 5" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto6.jpeg" alt="Execução Refrinova 6" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto7.jpeg" alt="Execução Refrinova 7" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto8.jpeg" alt="Execução Refrinova 8" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto9.jpeg" alt="Execução Refrinova 9" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto10.jpeg" alt="Execução Refrinova 10" loading="lazy"></div>
+                <div class="gallery-item"><img src="assets/foto11.jpeg" alt="Execução Refrinova 11" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
     <section class="section bg-darker">
         <div class="container">
             <div style="text-align: center; max-width: 800px; margin: 0 auto;">
                 <span class="sub-title">VERSATILIDADE TÉCNICA</span>
                 <h2>Expertise em Diversos Setores</h2>
                 <p style="color: var(--gray); margin-top: 15px;">
-                    Além dos nossos grandes cases, a Refrinova possui experiência comprovada atendendo demandas específicas de múltiplos segmentos industriais.
+                    Além dos nossos grandes cases, a Refrinova possui experiência comprovada atendendo demandas
+                    específicas de múltiplos segmentos industriais.
                 </p>
             </div>
 
@@ -130,6 +321,20 @@
                     <i class="fas fa-industry"></i>
                     <h4>Indústria Química</h4>
                 </div>
+                <div class="sector-card">
+                    <i class="fas fa-server"></i>
+                    <h4>Restaurantes e Food Service</h4>
+                </div>
+
+                <div class="sector-card">
+                    <i class="fas fa-hospital"></i>
+                    <h4>Indústria Alimentícia</h4>
+                </div>
+
+                <div class="sector-card">
+                    <i class="fas fa-wine-bottle"></i>
+                    <h4>Indústria de Bebidas</h4>
+                </div>
             </div>
         </div>
     </section>
@@ -150,4 +355,5 @@
     <script src="js/script.js"></script>
     <script>function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }</script>
 </body>
+
 </html>
