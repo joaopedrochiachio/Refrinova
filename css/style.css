@@ -256,8 +256,12 @@ header.scrolled {
     padding-bottom: 40px;
 }
 
-/* FIX CRÍTICO: Aplica estilos de grid APENAS ao slider da Hero, não à galeria */
-.hero-slider .swiper-slide {
+.gallery-swiper {
+    padding-bottom: 0;
+}
+
+/* Aplica o grid apenas no slide principal da Hero */
+.hero-slider .mySwiper > .swiper-wrapper > .swiper-slide {
     display: grid;
     grid-template-columns: 1fr 0.9fr;
     gap: 40px;
@@ -266,7 +270,7 @@ header.scrolled {
     transition: opacity 0.5s;
 }
 
-.hero-slider .swiper-slide-active {
+.hero-slider .mySwiper > .swiper-wrapper > .swiper-slide.swiper-slide-active {
     opacity: 1;
 }
 
@@ -293,6 +297,8 @@ header.scrolled {
 .slide-image-right {
     height: 450px;
     width: 100%;
+    display: flex;
+    align-items: stretch;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
@@ -756,12 +762,14 @@ footer {
     border-radius: 20px;
 }
 
-/* FIX CRÍTICO: Garante que os slides da galeria funcionem como bloco (não Grid) */
-.gallery-swiper .swiper-slide {
-    display: block !important;
+.gallery-swiper .swiper-wrapper {
     height: 100%;
-    opacity: 1 !important;
-    /* Garante que sejam visíveis */
+}
+
+/* Garante que os slides da galeria ocupem toda a área da moldura */
+.gallery-swiper .swiper-slide {
+    display: block;
+    height: 100%;
 }
 
 .gallery-swiper img {
@@ -811,7 +819,7 @@ footer {
         display: block;
     }
 
-    .hero-slider .swiper-slide {
+    .hero-slider .mySwiper > .swiper-wrapper > .swiper-slide {
         display: flex;
         flex-direction: column;
         gap: 50px;

@@ -20,20 +20,34 @@ if (document.querySelector('.mySwiper')) {
 }
 
 // 2. SWIPER GALERIA: Carrossel de fotos (Home e Sobre)
-// Só roda se existir o elemento .gallery-swiper
-if (document.querySelector('.gallery-swiper')) {
-    const gallerySwiper = new Swiper(".gallery-swiper", {
-        effect: "fade",              // Efeito de transição suave
+// Inicializa cada galeria encontrada na página
+const galleryInstances = [];
+document.querySelectorAll('.gallery-swiper').forEach((galleryElement) => {
+    const instance = new Swiper(galleryElement, {
+        effect: "fade",
         fadeEffect: { crossFade: true },
-        loop: true,                  // Roda infinito
-        speed: 1500,                 // Velocidade da transição (1.5s)
+        loop: true,
+        speed: 1500,
+        slidesPerView: 1,
         autoplay: {
-            delay: 3500,             // Troca a cada 3.5 segundos
+            delay: 3500,
             disableOnInteraction: false,
         },
-        allowTouchMove: false,       // Foca no visual
+        allowTouchMove: false,
+        observer: true,
+        observeParents: true,
     });
-}
+
+    galleryInstances.push(instance);
+});
+
+window.addEventListener('load', () => {
+    galleryInstances.forEach((instance) => instance.update());
+});
+
+window.addEventListener('resize', () => {
+    galleryInstances.forEach((instance) => instance.update());
+});
 
 // 3. SCROLL REVEAL: Animações de entrada
 const sr = ScrollReveal({
